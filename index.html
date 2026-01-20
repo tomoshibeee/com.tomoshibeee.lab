@@ -1,17 +1,127 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>ともしびラボ</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="p-4 bg-blue-500 text-white text-center font-bold">ともしびラボ</header>
-  <main class="p-8">
-    <h1 class="text-3xl font-bold mb-4">Shokoの実験ページ</h1>
-    <p>ここにプロジェクトやアウトプットを載せます。</p>
-    <a href="#" class="text-blue-600 underline mt-4 block">ブログはこちら</a>
-  </main>
-  <footer class="p-4 text-center text-gray-500">© 2026 Shoko</footer>
+
+<body class="bg-gray-50 text-gray-800"> <!-- ヘッダー -->
+  <header class="p-4 bg-blue-500 text-white font-bold">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <!-- ロゴ -->
+      <div>🕯️ ともしびラボ</div>
+
+      <!-- ハンバーガー -->
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+
+      <!-- PCメニュー -->
+      <nav id="menu" class="hidden md:flex space-x-4 font-normal">
+        <a href="#work">特徴</a>
+        <a href="#case">事例</a>
+        <a href="#pricing">料金</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+
+    <!-- スマホ用メニュー -->
+    <nav id="mobileMenu" class="hidden md:hidden mt-4 flex flex-col space-y-2 text-center font-normal">
+      <a href="#work">特徴</a>
+      <a href="#case">事例</a>
+      <a href="#pricing">料金</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+
+    <script>
+      const btn = document.getElementById('menuBtn')
+      const mobileMenu = document.getElementById('mobileMenu')
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden')
+      })
+    </script>
+  </header>
+  <!-- メインコンテンツ -->
+  <main class="p-8 space-y-16"> <!-- ファーストビュー -->
+    <section id="hero" class="relative h-96"> <img src="res/top.png" alt="プログラミングラボ"
+        class="absolute w-full h-full object-cover"> <!-- 文字中央 -->
+      <div class="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-white bg-black/30">
+        <div
+          class="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-white bg-black/30 text-center px-4">
+          <h1 class="text-4xl font-bold">TomoshibeeeLab</h1>
+
+          <p class="text-lg mt-2">
+            中小企業・個人開発者向けの技術改善ラボ
+          </p>
+
+          <p class="text-base mt-1 opacity-90">
+            “処理の高速化”を目指すプログラミングラボ
+          </p>
+        </div>
+      </div> <!-- 右下ボタン -->
+      <div class="absolute bottom-4 right-4 z-20"> <a href="#contact"
+          class="bg-red-500 text-white px-6 py-3 rounded hover:bg-red-600"> お問い合わせ </a> </div>
+    </section> <!-- 業務内容 -->
+    <section id="work">
+      <h2 class="text-3xl font-bold mb-4">業務内容</h2>
+      <ol class="list-decimal list-inside space-y-2">
+        <li>プログラムの速度改善</li>
+        <li>業務分析＆改善</li>
+        <li>古いコードの解析</li>
+      </ol>
+    </section> <!-- Case / 事例 -->
+    <section id="case" class="space-y-8">
+      <h2 class="text-3xl font-bold mb-4">事例 / 成果紹介</h2> <!-- 事例1 -->
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">ECサイトの処理速度改善</h3>
+        <p>古いコードで遅くなっていた商品検索処理を最適化。ページ表示速度が平均 3秒 → 1秒に改善。</p>
+        <p class="text-gray-500 mt-1">期間: 2週間 | 担当: 有馬祥子</p>
+      </div> <!-- 事例2 -->
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">レガシー業務アプリの分析＆改善</h3>
+        <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
+        <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
+      </div> <!-- 事例3 -->
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">納品済のブログシステムの移管</h3>
+        <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
+        <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
+      </div>
+    </section> <!-- Member / メンバー紹介 -->
+    <section id="member">
+      <h2 class="text-3xl font-bold mb-4">Member / メンバー紹介</h2>
+      <div class="space-y-4">
+        <div class="flex items-center space-x-4"> <img src="https://via.placeholder.com/80" alt="メンバー写真"
+            class="rounded-full">
+          <div>
+            <p class="font-semibold">山田 太郎</p>
+            <p>AIエンジニア / 「コード改善が得意です」</p>
+          </div>
+        </div>
+        <p class="text-center">📍静岡</p>
+      </div>
+    </section> <!-- Pricing / 単価 -->
+    <section id="pricing">
+      <h2 class="text-3xl font-bold mb-4">料金 / 単価</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>初回相談（1時間）: 無料</li>
+        <li>技術相談：¥7,500 / 1時間（¥125 / 分）</li>
+        <li>処理高速化サービス: ¥30,000〜（※成果保証付き）</li>
+      </ul>
+      <p class="mt-2 text-gray-600 text-sm"> ※成果が出なかった場合は、請求いたしません。安心してご依頼ください。 </p>
+    </section> <!-- FAQ / よくある質問 -->
+    <section id="faq">
+      <h2 class="text-3xl font-bold mb-4">よくある質問</h2>
+      <p>現在準備中…</p>
+    </section> <!-- Contact / 問い合わせ -->
+    <section id="contact" class="space-y-4">
+      <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2> <!-- Google Forms埋め込み例 --> <iframe
+        src="https://docs.google.com/forms/d/e/xxxxxxxxxxxx/viewform?embedded=true" width="100%" height="600"
+        frameborder="0" marginheight="0" marginwidth="0"> 読み込んでいます… </iframe>
+    </section> <!-- ブログリンク -->
+    <section class="text-center"> <a href="#" class="text-blue-600 underline">ブログはこちら</a> </section>
+  </main> <!-- フッター -->
+  <footer class="p-4 text-center text-gray-500"> © 2026 TomoshibeeeLab Inc. </footer>
 </body>
+
 </html>
