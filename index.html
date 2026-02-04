@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>トモシビーラボ</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+  <style>
+    .ballet-400 {
+      font-family: "Ballet", cursive;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -13,7 +24,10 @@
   <header class="sticky top-0 z-50 p-4 bg-red-500 text-white font-bold">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
       <!-- ロゴ -->
-      <div>🕯️ トモシビーラボ</div>
+      <div class="flex items-center">
+        <img src="res/icon.png" alt="ともしびラボ アイコン" class="w-8 h-8 mr-2">
+        <span class="leading-none">トモシビーラボ</span>
+      </div>
 
       <!-- ハンバーガー -->
       <button id="menuBtn" class="md:hidden text-2xl">☰</button>
@@ -53,7 +67,7 @@
       <!-- オーバーレイ＋中央テキスト -->
       <div class="absolute inset-0 z-10 flex flex-col items-center justify-center
            text-white bg-black/10 text-center px-4">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+        <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold ballet-400">
           TomoshibeeeLab
         </h1>
 
