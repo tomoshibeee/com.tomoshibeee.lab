@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ともしびラボ</title>
+  <title>トモシビーラボ</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -13,7 +13,7 @@
   <header class="sticky top-0 z-50 p-4 bg-red-500 text-white font-bold">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
       <!-- ロゴ -->
-      <div>🕯️ ともしびラボ</div>
+      <div>🕯️ トモシビーラボ</div>
 
       <!-- ハンバーガー -->
       <button id="menuBtn" class="md:hidden text-2xl">☰</button>
@@ -46,7 +46,7 @@
   <!-- メインコンテンツ -->
   <main class="p-0 space-y-16"> <!-- ファーストビュー -->
     <section id="hero" class="relative h-72 md:h-96 lg:h-[500px]">
-      <img src="res/top.png" class="absolute inset-0 w-full h-full object-cover">
+      <img src="res/top.png" class="absolute inset-0 w-full h-full object-cover" alt="トモシビーラボのトップ画像">
       <!-- 黒フィルター -->
       <div class="absolute inset-0 bg-black/60"></div>
 
@@ -83,35 +83,32 @@
     </section> <!-- Case / 事例 -->
     <section id="case" class="space-y-8">
       <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">事例 / 成果紹介</h2> <!-- 事例1 -->
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">ECサイトの処理速度改善</h3>
-        <p>古いコードで遅くなっていた商品検索処理を最適化。ページ表示速度が平均 3秒 → 1秒に改善。</p>
-        <p class="text-gray-500 mt-1">期間: 2週間 | 担当: 有馬祥子</p>
-      </div> <!-- 事例2 -->
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">レガシー業務アプリの分析＆改善</h3>
-        <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
-        <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
-      </div> <!-- 事例3 -->
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">納品済のブログシステムの移管</h3>
-        <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
-        <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
+        <h2 class="text-3xl font-bold mb-4">事例 / 成果紹介</h2> <!-- 事例1 -->
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">ECサイトの処理速度改善</h3>
+          <p>古いコードで遅くなっていた商品検索処理を最適化。ページ表示速度が平均 3秒 → 1秒に改善。</p>
+          <p class="text-gray-500 mt-1">期間: 2週間 | 担当: 有馬祥子</p>
+        </div> <!-- 事例2 -->
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">レガシー業務アプリの分析＆改善</h3>
+          <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
+          <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
+        </div> <!-- 事例3 -->
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">納品済のブログシステムの移管</h3>
+          <p>Excel自動化とコード解析により、月次作業の工数を 40% 削減。</p>
+          <p class="text-gray-500 mt-1">期間: 1ヶ月 | 担当: 有馬祥子</p>
+        </div>
       </div>
-      </div>
-    </section> 
+    </section>
     <section id="member" class="py-16">
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8">Member / メンバー紹介</h2>
 
         <div class="flex items-start space-x-6">
           <!-- プロフィール写真 -->
-          <img
-            src="res/profile-arima.png"
-            alt="有馬祥子 プロフィール写真"
-            class="w-24 h-24 rounded-full object-cover border-2 border-gray-200"
-          >
+          <img src="res/profile-arima.png" alt="有馬祥子 プロフィール写真"
+            class="w-24 h-24 rounded-full object-cover border-2 border-gray-200">
 
           <!-- プロフィール文 -->
           <div class="space-y-2">
@@ -132,36 +129,39 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
     <!-- Pricing / 単価 -->
     <section id="pricing">
       <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">料金 / 単価</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>初回相談（1時間）: 無料</li>
-        <li>技術相談：¥7,500 / 1時間（¥125 / 分）</li>
-        <li>処理高速化サービス: ¥30,000〜（※成果保証付き）</li>
-      </ul>
-      <p class="mt-2 text-gray-600 text-sm"> ※成果が出なかった場合は、請求いたしません。安心してご依頼ください。 </p>
+        <h2 class="text-3xl font-bold mb-4">料金 / 単価</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>初回相談（1時間）: 無料</li>
+          <li>技術相談：¥7,500 / 1時間（¥125 / 分）</li>
+          <li>処理高速化サービス: ¥30,000〜（※成果保証付き）</li>
+        </ul>
+        <p class="mt-2 text-gray-600 text-sm"> ※成果が出なかった場合は、請求いたしません。安心してご依頼ください。 </p>
       </div>
     </section> <!-- FAQ / よくある質問 -->
     <section id="faq">
       <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">よくある質問</h2>
-      <p>現在準備中…</p>
+        <h2 class="text-3xl font-bold mb-4">よくある質問</h2>
+        <p>現在準備中…</p>
       </div>
     </section> <!-- Contact / 問い合わせ -->
     <section id="contact" class="space-y-4">
       <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2> <!-- Google Forms埋め込み例 -->
-      <p class="text-sm text-gray-600">ご相談内容が整理できていなくても大丈夫です。</p>
-      <p class="text-sm text-gray-600">初回相談は無料ですので、お気軽にご連絡ください。
-      </p> <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeIxFcREARZjxxuuzXHXGkjcSOez78-2X85Q-0oM_WGC2k-BQ/viewform?embedded=true"
-        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"> 読み込んでいます… </iframe>
+        <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2> <!-- Google Forms埋め込み例 -->
+        <p class="text-sm text-gray-600">ご相談内容が整理できていなくても大丈夫です。</p>
+        <p class="text-sm text-gray-600">初回相談は無料ですので、お気軽にご連絡ください。
+        </p> <iframe class="w-full h-[400px]"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeIxFcREARZjxxuuzXHXGkjcSOez78-2X85Q-0oM_WGC2k-BQ/viewform?embedded=true"></iframe>
       </div>
-      </section> <!-- ブログリンク -->
-    <section class="text-center"> <a href="#" class="text-blue-600 underline">ブログはこちら</a> </section>
+    </section> <!-- ブログリンク -->
+    <section class="text-center">
+      <h2>
+        <a href="#" class="text-blue-600 underline">ブログはこちら</a>
+      </h2>
+    </section>
   </main> <!-- フッター -->
   <footer class="p-4 text-center text-gray-500"> © 2026 TomoshibeeeLab Inc. </footer>
 </body>
